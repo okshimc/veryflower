@@ -7,6 +7,23 @@ nt_order 테이블은 필드추가시 마지막에 해야함.
 디비백업 셸스크립트도 연동됨
 /home/tmp/nt_order_schema.sql
 
+2018-09-11
+-------------------------------------------------------------------------------------------
+SELECT * FROM nt_account WHERE date<'201312' ;
+
+INSERT INTO nt_account_past
+SELECT * FROM nt_account WHERE date<'201312' ;
+
+DELETE FROM nt_account WHERE date<'201312' ;
+
+SELECT * FROM nt_charge WHERE inout_date<'20140101' ;
+
+INSERT INTO nt_charge_past
+SELECT * FROM nt_charge WHERE inout_date<'20140101' ;
+
+DELETE FROM nt_charge WHERE inout_date<'20140101' ;
+
+
 2018-08-29
 ---------------------------------------------------------------------------------------------
 ALTER TABLE `account_temp` ADD `reg_id` VARCHAR( 30 ) NOT NULL ,
