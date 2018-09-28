@@ -1,4 +1,3 @@
-master 브랜치
 
 ALTER TABLE `nt_account` ADD `diff_price` INT NOT NULL DEFAULT '0' AFTER `dica_suju_not_count` ;
 ALTER TABLE `nt_account` ADD `order_type` CHAR( 1 ) NOT NULL DEFAULT '1';
